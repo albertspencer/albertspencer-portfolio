@@ -1,18 +1,45 @@
-# Albert Spencer – Technical Portfolio
+# ThoughtTronix Orders – C# OOP Review (Homework 1)
 
-Welcome to my portfolio! This repository contains selected projects that demonstrate my technical skills in C#, ASP.NET, databases, and systems analysis.
+A small **C# console application** that models products and customer orders for the fictional company **ThoughtTronix**.
+It demonstrates **classes**, **object composition** (an `Order` has a list of `Product`), simple **aggregation**, and a computed **order total**.
 
----
+## ✨ Features
+- `Product` class with `Name`, `Description`, and `Price`
+- `Order` class with `OrderId`, `CustomerName`, and `List<Product>`
+- Calculates order totals by summing product prices
+- Clean `ToString()` overrides for readable console output
 
-## 📂 Project Highlights
-- **ThoughtTronix Orders (C# OOP)** — A console application that models products and orders for a fictional company. Demonstrates object-oriented programming, class relationships, and list usage.  
-  _Folder:_ `CSharpProjects/ThoughtTronix-Orders`  
-  _Tech:_ C# (.NET), OOP, Lists
+## 🧰 Tech Stack
+- C# (.NET)
+- Console application
+- OOP (classes, properties, lists)
 
----
+## 🗂️ Project Structure
+```text
+homework-1-albertspencer/
+├─ Models/
+│  ├─ Product.cs
+│  └─ Order.cs
+├─ Program.cs
+└─ homework-1-albertspencer.csproj
+```
 
-## 📖 Structure
-- `CSharpProjects/` — Console apps, games, and OOP practice  
-- `WebProjects/` — ASP.NET / Razor Pages / Web apps  
-- `DatabaseProjects/` — SQL schemas, queries, and ERDs  
-- `SystemsAnalysis/` — UML diagrams, proposals, and documentation
+## ▶️ How to Run
+```bash
+# from this folder
+dotnet build
+dotnet run
+```
+
+## 📌 Example Output (sample)
+```
+Order #1001 - Alice Johnson
+- Seraphine — $199.99
+- Aegis Shield — $89.50
+- ...
+Total: $289.49
+```
+
+## 🧩 Notes
+- This project was built as a **C# review** focused on class design and lists.
+- Perfect as a starter portfolio piece for OOP fundamentals.
