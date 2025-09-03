@@ -3,11 +3,14 @@
 Welcome to my portfolio! This repository contains selected projects that demonstrate my technical skills in C#, ASP.NET, databases, and systems analysis.
 
 ---
-
 ## 📂 Project Highlights
-- **ThoughtTronix Orders (C# OOP)** — A console application that models products and orders for a fictional company. Demonstrates object-oriented programming, class relationships, and list usage.  
+- **ThoughtTronix Orders (C# OOP)** — A console application that models products and orders for a fictional company.  
   _Folder:_ `CSharpProjects/ThoughtTronix-Orders`  
-  _Tech:_ C# (.NET), OOP, Lists
+  _Tech:_ C# (.NET), OOP, Lists  
+
+- **Lab 6 – Razor Pages Web App** — An ASP.NET Core Razor Pages project showing page handlers, model binding, and validation.  
+  _Folder:_ `WebProjects/Lab6-RazorPages`  
+  _Tech:_ ASP.NET Core, Razor Pages, C#
 
 ---
 
