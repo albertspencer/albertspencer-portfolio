@@ -12,6 +12,13 @@ Welcome to my portfolio! This repository contains selected projects that demonst
   _Folder:_ `WebProjects/Lab6-RazorPages`  
   _Tech:_ ASP.NET Core, Razor Pages, C#
 
+
+  - **Lab 10 – Razor Pages + EF Core**  
+  Full ASP.NET Core Razor Pages application with EF Core and Migrations.  
+  _Folder:_ `WebProjects/Lab10-RazorPages-EFCore`  
+  _Tech:_ ASP.NET Core, Razor Pages, EF Core, SQLite
+
+
 ---
 
 ## 📖 Structure
