@@ -1,0 +1,61 @@
+@page
+@model lab_6_albertspencer.Pages.CancelModel
+@using lab_6_albertspencer.Models  
+
+<h2>ThoughtTronix Cancellation Request Form</h2>
+
+<form method="post">
+    <div class="mb-3">
+    <label asp-for="CancelObject.FirstName" class="form-label">First Name</label>
+    <input asp-for="CancelObject.FirstName" class="form-control" placeholder="Enter First Name" />
+    <span asp-validation-for="CancelObject.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+    <label asp-for="CancelObject.LastName" class="form-label">Last Name</label>
+    <input asp-for="CancelObject.LastName" class="form-control" placeholder="Enter Last Name" />
+    <span asp-validation-for="CancelObject.LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+    <label asp-for="CancelObject.Email" class="form-label">Email Address</label>
+    <input asp-for="CancelObject.Email" class="form-control" placeholder="Enter Email" />
+    <span asp-validation-for="CancelObject.Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+    <label asp-for="CancelObject.Phone" class="form-label">Phone Number</label>
+    <input asp-for="CancelObject.Phone" class="form-control" placeholder="Enter Phone Number" />
+    <span asp-validation-for="CancelObject.Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+    <label asp-for="CancelObject.Product" class="form-label">Select the product you are cancelling</label>
+    <select asp-for="CancelObject.Product" class="form-select" asp-items="Html.GetEnumSelectList<Product>()">
+    <option value="">-- Select a Product --</option>
+    </select>
+    <span asp-validation-for="CancelObject.Product" class="text-danger"></span>
+    </div>
+
+    <div class="form-check">
+    <input asp-for="CancelObject.AgreeToNDA" class="form-check-input" />
+    <label asp-for="CancelObject.AgreeToNDA" class="form-check-label">Agree to non-disclosure terms</label>
+    </div>
+
+    <div class="form-check">
+    <input asp-for="CancelObject.AgreeToLiability" class="form-check-input" />
+    <label asp-for="CancelObject.AgreeToLiability" class="form-check-label">Agree to waive all liability</label>
+    </div>
+
+    <div class="form-check">
+    <input asp-for="CancelObject.AgreeToFee" class="form-check-input" />
+    <label asp-for="CancelObject.AgreeToFee" class="form-check-label">Agree to early termination fee</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Cancellation Request</button>
+</form>
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+

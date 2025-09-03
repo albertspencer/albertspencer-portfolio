@@ -1,0 +1,32 @@
+@page
+@model lab_6_albertspencer.Pages.ConfirmationModel
+
+<h2>Cancellation Request Received</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">First Name</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.FirstName)</dd>
+
+    <dt class="col-sm-3">Last Name</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.LastName)</dd>
+
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.Email)</dd>
+
+    <dt class="col-sm-3">Phone</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.Phone)</dd>
+
+    <dt class="col-sm-3">Product</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.Product)</dd>
+
+    <dt class="col-sm-3">Agree to NDA</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.AgreeToNDA)</dd>
+
+    <dt class="col-sm-3">Agree to Liability</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.AgreeToLiability)</dd>
+
+    <dt class="col-sm-3">Agree to Fee</dt
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.CancelObject.AgreeToFee)</dd>
+   </dl>
+
+   <a asp-page="/Cancel" class="btn btn-primary">Back to Cancellation Form</a>
