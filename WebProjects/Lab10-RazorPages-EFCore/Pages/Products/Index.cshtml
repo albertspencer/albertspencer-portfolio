@@ -1,0 +1,56 @@
+@page
+@model lab_10_albertspencer.Pages.Products.IndexModel
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Reviews</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Loop through each product in the Product collection -->
+        @foreach (var product in Model.Product ?? Enumerable.Empty<lab_10_albertspencer.Models.Product>())
+        {
+            <tr>
+                <!-- Display Product Image -->
+                <td>
+                    <img src="/img/@product.ImageURL" alt="@product.Name" style="max-width: 150px;" />
+
+                </td>
+
+                <!-- Product Name -->
+                <td>@product.Name</td>
+
+                <!-- Product Description -->
+                <td>@product.Description</td>
+
+                <!-- Reviews -->
+                <td>
+                    @foreach (var review in product.Reviews ?? Enumerable.Empty<lab_10_albertspencer.Models.Review>())
+                    {
+                        <div>
+                            <span class="d-inline-block text-truncate" style="max-width: 300px;">
+                                @review.ReviewText
+                            </span>
+                            <p><strong>Score:</strong> @review.Score / 5</p>
+                        </div>
+                    }
+                </td>
+
+                <!-- Edit, Details, Delete Links -->
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@product.ProductID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@product.ProductID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@product.ProductID">Delete</a>
+                </td>
+            </tr>
+            <tr><td colspan="5"><hr /></td></tr>
+        }
+    </tbody>
+</table>
