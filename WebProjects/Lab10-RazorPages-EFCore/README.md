@@ -38,5 +38,3 @@ dotnet ef database update
 
 > Do not commit real credentials/connection strings.
 
-## 📸 Screenshots (optional)
-Add a `screenshots/` folder and link images here.
